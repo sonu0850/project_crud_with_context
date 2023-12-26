@@ -3,12 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { Authprovider } from './Context/Authprovider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Authprovider>
+    <BrowserRouter>
+ 
     <App />
-  </React.StrictMode>
+    </BrowserRouter>
+    </Authprovider>
+ 
 );
 
 // If you want to start measuring performance in your app, pass a function
